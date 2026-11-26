@@ -73,6 +73,7 @@
     var validate = function (input) {
       var v = input.value.trim();
       if (input.required && !v) return "Please fill in this field.";
+      if (input.tagName === "SELECT") return "";
       if (input.type === "email" && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return "Please enter a valid email address.";
       if (input.type === "tel" && v && !/^[+0-9\s()-]{7,}$/.test(v)) return "Please enter a valid phone number.";
       return "";
@@ -93,6 +94,26 @@
         if (msg && !firstBad) firstBad = input;
       });
       if (firstBad) { firstBad.focus(); return; }
+
+      /* Send the enquiry as a ready-to-send WhatsApp message */
+      var waNumber = form.getAttribute("data-whatsapp");
+      if (waNumber) {
+        var val = function (name) { var el = form.elements[name]; return el ? el.value.trim() : ""; };
+        var lines = ["Hi HomeLife, I'd like to enquire.", "", "Name: " + val("name")];
+        if (val("phone")) lines.push("Phone: " + val("phone"));
+        if (val("area")) lines.push("Area: " + val("area"));
+        lines.push("Interested in: " + val("topic"));
+        lines.push("", val("message"));
+        var url = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(lines.join("\n"));
+        window.open(url, "_blank", "noopener");
+        status.className = "form-status form-status--ok";
+        status.textContent = "WhatsApp is opening with your message. Just press send. If it didn't open, ";
+        var a = document.createElement("a");
+        a.href = url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "tap here to continue on WhatsApp";
+        status.appendChild(a);
+        status.appendChild(document.createTextNode("."));
+        return;
+      }
 
       var endpoint = form.getAttribute("data-endpoint");
       if (!endpoint) {

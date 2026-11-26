@@ -8,13 +8,13 @@ A static website for **HomeLife**: *Elevate Your Living Space*. It is plain HTML
 thehomelife-website/
 ├── index.html          Home
 ├── about.html          About
-├── products.html       Products & Services
-├── contact.html        Contact (details, enquiry form, map slot)
+├── products.html       Collections & Services
+├── contact.html        Contact (details, WhatsApp enquiry form, map)
 ├── 404.html            "Page not found" page
 ├── assets/
 │   ├── css/styles.css  All styles (colour, font and spacing tokens at the top)
-│   ├── js/main.js      Mobile menu, scroll reveal, contact-form validation
-│   └── img/            favicon.svg; put your photos here
+│   ├── js/main.js      Mobile menu, scroll reveal, contact form → WhatsApp
+│   └── img/            All photos and favicon.svg
 └── design-system/homelife/   Design system from the ui-ux-pro-max skill (MASTER.md, tokens)
 ```
 
@@ -26,31 +26,33 @@ Double-click `index.html` to open it in your browser. To run it the way a real h
 python -m http.server 8080
 ```
 
-## Content you need to fill in
+## Business details on the site
 
-The old GoDaddy site only had the name **HomeLife**, the tagline **"Elevate Your Living Space"** and an empty contact section and store. No products, prices, contact details, address or social links were published there. So nothing like that has been made up here. Every gap is marked:
-
-- on the page, with a dashed amber outline and a **TO ADD**, **EXAMPLE** or **PHOTO TO ADD** label;
-- in the HTML, with a `<!-- TODO: ... -->` comment that says what goes there.
-
-To find them all, search the project for `TODO` and `placeholder`. The main items:
-
-| Where | What to add |
+| Detail | Value |
 |---|---|
-| `contact.html` | Phone, email, address, opening hours. Use `tel:` and `mailto:` links. (WhatsApp is done; see below.) |
-| `contact.html` | A Google Maps embed, or delete the map block if you have no shop. |
-| `products.html` | The six category tiles (Living, Bedroom, Dining, Lighting, Décor, Greenery) are **examples** matched to the photos. Rename or delete them to match what you really sell. |
-| `products.html` | Your services, or delete the Services section. |
-| `about.html`, `index.html` | Your story: who you are, where you're based, how HomeLife started. |
-| Footer (every page) | Instagram and Facebook URLs. Replace the `href="#"` links or delete the icons. |
+| Business | HomeLife: home furnishing, *Elevate Your Living Space* |
+| Founder | Kunal Jalan |
+| Experience | 10+ years, 3rd-generation family business |
+| Showroom | Jayanagar, Bengaluru (area only, no street address yet) |
+| Phone and WhatsApp | +91 97487 49214 |
+| Instagram | https://www.instagram.com/thehomelife.in/ |
+| Facebook | https://www.facebook.com/profile.php?id=61597053927324 |
+| Products | Curtains, wallpapers, blinds, mattresses, sofas (new and repair), upholstery fabrics |
+| Collections | Curtains and More, Drapes Avenue, Opulence |
+| Services | Consultation booking, home visit service, customised orders, personal assistance, doorstep delivery, on time every time |
+| Promise | PET: Priority, Economical and Trustworthy services |
 
-The tagline, the "Ideas for your home" tips and the "What we believe" values are starter copy built around the HomeLife tagline. Edit them so they sound like you.
+Things you may still want to add or check:
+- **Street address:** the site says "Jayanagar, Bengaluru" and the map shows the area. Add the full address and the map can point to the exact showroom.
+- **Email and opening hours:** not on the site yet.
+- **Collection and product descriptions:** written from the details you gave. Check that each collection's description matches what it really includes.
+- **Photos:** all product and collection photos are stock photos (see below). Swap in photos of your own work when you have them.
 
-**The header and footer are repeated in each of the 5 HTML files.** When you change the menu, footer or social links, change them in every page.
+**The header and footer are repeated in each of the 5 HTML files.** When you change the menu, footer, phone number or social links, change them in every page.
 
 ## Photos
 
-All photos are in `assets/img/`. They are sized for the web (1000–2100px wide, about 80–550 KB each).
+All photos are in `assets/img/`. They are sized for the web (1000–2100px wide, about 70–670 KB each).
 
 ### ⚠️ The homepage hero photo (`hero-homelife.jpg`)
 
@@ -86,22 +88,35 @@ Every other photo is from Unsplash, under the [Unsplash License](https://unsplas
 | plant-mirror.jpg | https://unsplash.com/photos/5MrddkW_Cbg |
 | plants-wood.jpg | https://unsplash.com/photos/dM317CbttyY |
 | ceramic-bowls.jpg | https://unsplash.com/photos/vG9Y8YvzdSQ |
+| col-curtains-and-more.jpg | https://unsplash.com/photos/EcusinlsfwI |
+| col-drapes-avenue.jpg | https://unsplash.com/photos/SJ2TGUa432M |
+| col-opulence.jpg | https://unsplash.com/photos/0ulaNhNHvdM |
+| curtains-bright.jpg | https://unsplash.com/photos/j_J2JvXTe7M |
+| curtains-sheer-sofa.jpg | https://unsplash.com/photos/jvv2e1NJc9s |
+| wallpaper-floral.jpg | https://unsplash.com/photos/oeGFTHsXPw4 |
+| blinds-wood.jpg | https://unsplash.com/photos/8UwnkpMoYXo |
+| mattress.jpg | https://unsplash.com/photos/lrKF0_SM0Eg |
+| sofa-green.jpg | https://unsplash.com/photos/fZuleEfeA1Q |
+| fabric-rolls.jpg | https://unsplash.com/photos/stb9o3RE5lI |
+| fabric-samples.jpg | https://unsplash.com/photos/naeWaAYdKUg |
+| swatches-plans.jpg | https://unsplash.com/photos/pdCTX1harH4 |
+| drapes-tassel.jpg | https://unsplash.com/photos/jQ6dTEErNaQ |
+| velvet-closeup.jpg | https://unsplash.com/photos/o4HfkWSX5l0 |
 
-These are **mood photos, not HomeLife's products**. Once you have photos of your own products, store or finished rooms, swap them in, especially on the Products page. Keep the same file name, or update the `src`, `width` and `height` in the HTML. Write an `alt` text that describes what the photo shows.
+These are **stock photos, not HomeLife's own work**. Once you have photos of your own curtains, sofas, showroom or finished homes, swap them in, especially for the three collections. Keep the same file name, or update the `src`, `width` and `height` in the HTML. Write an `alt` text that describes what the photo shows.
 
 ## WhatsApp
 
-Every **Get in touch** style button opens a WhatsApp chat with **+91 97487 49214** in a new tab, with "Hi HomeLife, I'd like to know more." already typed. That covers the header button, the home hero, the photo panel at the bottom of each page, "Ask about our services", the contact page and the footer icon. The **Contact** menu link still goes to the contact page.
+All enquiry buttons open a WhatsApp chat with **+91 97487 49214** in a new tab, with a message already typed:
+- **Book consultation / Book your consultation** (header, home hero, services, bottom panels): "I'd like to book a consultation."
+- **Ask for a home visit:** "I'd like to ask for a home visit."
+- **Enquire** on each product, and **Enquire about …** on each collection: names that product or collection.
+- **Work with us** (About page, for designers and architects): a partnership message.
+- **Contact form:** builds a message from the name, phone, area, interest and message fields, then opens WhatsApp so the visitor only has to press send. Nothing is stored or emailed, and no form service is needed.
 
-The links look like `https://wa.me/919748749214?text=...`. To change the number, find and replace `919748749214` (country code, no `+` or spaces) and `+91 97487 49214` in all the HTML files.
+Phone numbers use `tel:+919748749214`, so they dial directly on mobiles.
 
-## Contact form
-
-The form checks the input in the browser, but **it is not connected to anything yet**. Until you connect it, visitors see an honest "not connected yet" message. Static hosting can't send email by itself, so pick one of these:
-
-- **Formspree** (any host): create a free form at formspree.io, then set the form's endpoint in `contact.html`:
-  `<form id="contact-form" data-endpoint="https://formspree.io/f/XXXXXXX" novalidate>`
-- **Netlify Forms** (Netlify only): add `name="contact" data-netlify="true"` to the `<form>`, set `data-endpoint="/"`, and add `<input type="hidden" name="form-name" value="contact">` inside the form.
+To change the number, find and replace `919748749214`, `+919748749214`, `+91 97487 49214` and `97487 49214` in all the HTML files, and `data-whatsapp="919748749214"` on the contact form.
 
 ## Hosting
 
@@ -131,7 +146,7 @@ When the new site is live, turn off or unpublish the old Website Builder site so
 
 Based on the ui-ux-pro-max design system (`design-system/homelife/MASTER.md`), then pushed toward an editorial, magazine-style look:
 
-- **Style:** photography-led. Full-screen hero, photo banners on every page, room tiles, a full-width quote band, a photo mosaic and an image CTA. Slow fade and image-unmask reveals as you scroll, plus a scrolling word strip. All motion switches off under `prefers-reduced-motion`.
+- **Style:** photography-led. Full-screen hero, a facts strip (10+ years, 3rd generation, made to order, PET), collection tiles, product cards, a dark services section, a 4-step process, a PET quote band, a founder's note, a photo mosaic and an image CTA. Slow fade and image-unmask reveals as you scroll, plus a scrolling word strip. All motion switches off under `prefers-reduced-motion`.
 - **Colours:** linen `#F7F2EC`, ivory `#FBF8F4`, espresso `#231E1B`, warm ink `#2A2522`, with terracotta `#9A5B33` and soft gold `#C8A27A` accents. Text colours meet the 4.5:1 contrast ratio.
 - **Type:** Cormorant Garamond (headings, with italic accents) and Montserrat (body), from the skill's "Luxury Serif" pairing, loaded from Google Fonts.
 - **Header:** transparent over the photos, turning solid ivory when you scroll. Full-screen menu on phones.
