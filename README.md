@@ -33,7 +33,7 @@ python -m http.server 8080
 | Business | HomeLife: home furnishing, *Elevate Your Living Space* |
 | Founder | Kunal Jalan |
 | Experience | 10+ years, 3rd-generation family business |
-| Showroom | Jayanagar, Bengaluru (area only, no street address yet) |
+| Showroom | Kanakapura Road, Bengaluru (area only, no street address yet) |
 | Phone and WhatsApp | +91 97487 49214 |
 | Instagram | https://www.instagram.com/thehomelife.in/ |
 | Facebook | https://www.facebook.com/profile.php?id=61597053927324 |
@@ -43,7 +43,7 @@ python -m http.server 8080
 | Promise | PET: Priority, Economical and Trustworthy services |
 
 Things you may still want to add or check:
-- **Street address:** the site says "Jayanagar, Bengaluru" and the map shows the area. Add the full address and the map can point to the exact showroom.
+- **Street address:** the site says "Kanakapura Road, Bengaluru" and the map shows the area. Add the full address and the map can point to the exact showroom.
 - **Email and opening hours:** not on the site yet.
 - **Collection and product descriptions:** written from the details you gave. Check that each collection's description matches what it really includes.
 - **Photos:** all product and collection photos are stock photos (see below). Swap in photos of your own work when you have them.
